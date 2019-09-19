@@ -116,3 +116,13 @@ Research thoroughly before writing a single line of code. Solidify the features 
 
 Prototype Key Feature(s)
 This is the “bread and butter” of the app, this is what makes your app yours. Calculate how long it takes to implement these features and triple the time estimated. That way you’ll have plenty of time to finish. It is preferred to drop features and spend more time working on your MVP features if needed.
+
+
+MVP
+- Onboarding process for users
+- Ability for an Organizer to invite other users (via username, email, phone, etc) to the "table" to split the bill with.
+- The organizer enters the total amount due and it's split evenly across everyone at the table
+- When the friend pays their part to the payor, the payor can mark it as paid and it's reflected on both of their profiles
+STRETCH
+- The organizer can enter a specific amount due for each of thier friends, but the app will alert them of they are asking for more than the total amount due.
+- Create a way to send an invite email or text to friends at the table that are not yet signed up for the app.
