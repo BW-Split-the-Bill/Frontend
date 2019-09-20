@@ -21,18 +21,16 @@ const Login = ({ errors, touched, status }) => {
     }, status)
 
     return (
-        <SForm>
             <Form>        
                 <h1>Sign In</h1>
-                {touched.email && errors.email && <p>{errors.email}</p>}
-                <Field type='text' name='email' placeholder='Email'/>
+                {touched.username && errors.username && <p>{errors.username}</p>}
+                <Field type='text' name='username' placeholder='Username'/>
 
                 {touched.pass && errors.pass && <p>{errors.pass}</p>}
                 <Field type='password' name='pass' placeholder='Password'/>
                 <br/>
                 <button type='submit'>Login</button>
             </Form>
-        </SForm>
     )
 
 }
@@ -51,7 +49,7 @@ export default withFormik({
     }),
 
     handleSubmit: (values, { setStatus }) => {
-        axios.post('https://reqres.in/api/users', values)
+        axios.post('https://split-thebill.herokuapp.com/auth/login', values)
             .then((res) => {
                 setStatus(res.data)
             })

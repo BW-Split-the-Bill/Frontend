@@ -21,7 +21,6 @@ const SignUp = ({ errors, touched, status }) => {
     }, status)
 
     return (
-        <SForm>
             <Form>
                 <h1>Sign Up</h1>
 
@@ -42,7 +41,6 @@ const SignUp = ({ errors, touched, status }) => {
                 <br/>
                 <button type='submit'>Create Account</button>
             </Form>
-        </SForm>
     )
 }
 
@@ -66,7 +64,7 @@ export default withFormik({
     }),
 
     handleSubmit: (values, { setStatus }) => {
-        axios.post('https://reqres.in/api/users', values)
+        axios.post('https://split-thebill.herokuapp.com/auth/register', values)
             .then((res) => {
                 setStatus(res.data)
             })
