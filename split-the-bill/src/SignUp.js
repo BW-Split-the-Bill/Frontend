@@ -2,9 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field, yupToFormErrors } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
+import styled from 'styled-components';
 
-const Login = ({ errors, touched, status }) => {
+const SignUp = ({ errors, touched, status }) => {
     const [login, setLogin] = useState([])
+
+    const SForm = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 20rem;
+    `
 
     useEffect(() => {
         if (status) {
@@ -13,25 +21,26 @@ const Login = ({ errors, touched, status }) => {
     }, status)
 
     return (
-        <Form>
-            {touched.name && errors.name && <p>{errors.name}</p>}
-            <Field type='text' name='name' placeholder='Name'/>
+            <Form>
+                <h1>Sign Up</h1>
 
-            {touched.username && errors.username && <p>{errors.username}</p>}
-            <Field type='text' name='username' placeholder='Username'/>
+                {touched.name && errors.name && <p>{errors.name}</p>}
+                <Field type='text' name='name' placeholder='Name'/>
 
-            {touched.email && errors.email && <p>{errors.email}</p>}
-            <Field type='text' name='email' placeholder='Email'/>
-            
-            {touched.phone && errors.phone && <p>{errors.phone}</p>}
-            <Field type='integer' name='phone' placeholder='Phone'/>
+                {touched.username && errors.username && <p>{errors.username}</p>}
+                <Field type='text' name='username' placeholder='Username'/>
 
-            {touched.pass && errors.pass && <p>{errors.pass}</p>}
-            <Field type='password' name='pass' placeholder='Password'/>
+                {touched.email && errors.email && <p>{errors.email}</p>}
+                <Field type='text' name='email' placeholder='Email'/>
+                
+                {touched.phone && errors.phone && <p>{errors.phone}</p>}
+                <Field type='integer' name='phone' placeholder='Phone'/>
 
-
-            <button type='submit'>submit</button>
-        </Form>
+                {touched.pass && errors.pass && <p>{errors.pass}</p>}
+                <Field type='password' name='pass' placeholder='Password'/>
+                <br/>
+                <button type='submit'>Create Account</button>
+            </Form>
     )
 }
 
@@ -55,7 +64,7 @@ export default withFormik({
     }),
 
     handleSubmit: (values, { setStatus }) => {
-        axios.post('https://reqres.in/api/users', values)
+        axios.post('https://split-thebill.herokuapp.com/auth/register', values)
             .then((res) => {
                 setStatus(res.data)
             })
@@ -63,4 +72,4 @@ export default withFormik({
                 console.log('Error: ', err)
             })
     }
-})(Login)
+})(SignUp)
