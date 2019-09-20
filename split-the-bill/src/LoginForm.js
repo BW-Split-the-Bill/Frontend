@@ -11,7 +11,6 @@ const Login = ({ errors, touched, status }) => {
             setLogin([ ...login, status])
         }
     }, status)
-
     return (
         <Form>
             {touched.name && errors.name && <p>{errors.name}</p>}
