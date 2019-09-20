@@ -9,6 +9,7 @@ import Login from './Login';
 function App() {
   return (
     <div className="App">
+      <h1>Split the Bill</h1>
       <Login />
       <h1>Or</h1>
       <SignUp/>

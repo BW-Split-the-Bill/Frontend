@@ -23,28 +23,28 @@ const Login = ({ errors, touched, status }) => {
     return (
             <Form>        
                 <h1>Sign In</h1>
+
                 {touched.username && errors.username && <p>{errors.username}</p>}
-                <Field type='text' name='username' placeholder='Username'/>
+                <Field type='text' name='username' placeholder=' Username'/>
 
                 {touched.pass && errors.pass && <p>{errors.pass}</p>}
-                <Field type='password' name='pass' placeholder='Password'/>
+                <Field type='password' name='pass' placeholder=' Password'/>
                 <br/>
                 <button type='submit'>Login</button>
             </Form>
     )
-
 }
 
 export default withFormik({
     mapPropsToValues: (values) => {
         return {
-            email: values.email || '',
+            username: values.username || '',
             pass: values.pass || ''
         }
     },
 
     validationSchema: yup.object().shape({       
-        email: yup.string().required('An email is required!'),
+        username: yup.string().required('An username is required!'),
         pass: yup.string().required('Password is required!')
     }),
 
