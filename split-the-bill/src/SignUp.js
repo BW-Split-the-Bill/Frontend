@@ -58,8 +58,8 @@ export default withFormik({
     validationSchema: yup.object().shape({
         name: yup.string().required('Name is required!'),
         username: yup.string().required('Username is required!'),
-        email: yup.string().required('An email is required!'),
-        phone: yup.string().required('A phone number is required!'),
+        email: yup.string().required('Email is required!'),
+        phone: yup.string().required('Phone number is required!'),
         pass: yup.string().required('Password is required!')
     }),
 
