@@ -25,19 +25,19 @@ const SignUp = ({ errors, touched, status }) => {
                 <h1>Sign Up</h1>
 
                 {touched.name && errors.name && <p>{errors.name}</p>}
-                <Field type='text' name='name' placeholder='Name'/>
+                <Field type='text' name='name' placeholder=' Name'/>
 
                 {touched.username && errors.username && <p>{errors.username}</p>}
-                <Field type='text' name='username' placeholder='Username'/>
+                <Field type='text' name='username' placeholder=' Username'/>
 
                 {touched.email && errors.email && <p>{errors.email}</p>}
-                <Field type='text' name='email' placeholder='Email'/>
+                <Field type='text' name='email' placeholder=' Email'/>
                 
                 {touched.phone && errors.phone && <p>{errors.phone}</p>}
-                <Field type='integer' name='phone' placeholder='Phone'/>
+                <Field type='integer' name='phone' placeholder=' Phone'/>
 
                 {touched.pass && errors.pass && <p>{errors.pass}</p>}
-                <Field type='password' name='pass' placeholder='Password'/>
+                <Field type='password' name='pass' placeholder=' Password'/>
                 <br/>
                 <button type='submit'>Create Account</button>
             </Form>
@@ -58,8 +58,8 @@ export default withFormik({
     validationSchema: yup.object().shape({
         name: yup.string().required('Name is required!'),
         username: yup.string().required('Username is required!'),
-        email: yup.string().required('An email is required!'),
-        phone: yup.string().required('A phone number is required!'),
+        email: yup.string().required('Email is required!'),
+        phone: yup.string().required('Phone number is required!'),
         pass: yup.string().required('Password is required!')
     }),
 
