@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.css';
 import SignUp from './SignUp';
 import Login from './Login';
+import Invite from './Invite';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <h1>Split the Bill</h1>
       <Login />
       <h1>Or</h1>
-      <SignUp/>
+      <SignUp />
+    
+      <Invite />
     </div>
   );
 }
