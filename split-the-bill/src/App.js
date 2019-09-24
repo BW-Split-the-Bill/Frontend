@@ -6,6 +6,7 @@ import './App.css';
 import SignUp from './SignUp';
 import Login from './Login';
 import Invite from './Invite';
+import Paid from './PaidOrNot';
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
       <SignUp />
     
       <Invite />
+
+      <Paid />
     </div>
   );
 }

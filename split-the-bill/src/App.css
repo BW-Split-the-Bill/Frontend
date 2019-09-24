@@ -70,3 +70,8 @@ button {
 p {
   color: white;
 }
+
+.owed {
+  display: flex;
+  justify-content: center;
+}
