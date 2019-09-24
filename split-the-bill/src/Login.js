@@ -27,8 +27,8 @@ const Login = ({ errors, touched, status }) => {
                 {touched.username && errors.username && <p>{errors.username}</p>}
                 <Field type='text' name='username' placeholder=' Username'/>
 
-                {touched.pass && errors.pass && <p>{errors.pass}</p>}
-                <Field type='password' name='pass' placeholder=' Password'/>
+                {touched.password && errors.password && <p>{errors.password}</p>}
+                <Field type='password' name='password' placeholder=' Password'/>
                 <br/>
                 <button type='submit'>Login</button>
             </Form>
@@ -39,13 +39,13 @@ export default withFormik({
     mapPropsToValues: (values) => {
         return {
             username: values.username || '',
-            pass: values.pass || ''
+            password: values.password || ''
         }
     },
 
     validationSchema: yup.object().shape({       
         username: yup.string().required('Username is required!'),
-        pass: yup.string().required('Password is required!')
+        password: yup.string().required('Password is required!')
     }),
 
     handleSubmit: (values, { setStatus }) => {
