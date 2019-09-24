@@ -73,5 +73,10 @@ p {
 
 .owed {
   display: flex;
-  justify-content: center;
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.owed button {
+  margin: 1rem auto 1rem auto;
 }
