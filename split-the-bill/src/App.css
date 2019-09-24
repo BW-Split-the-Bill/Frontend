@@ -20,7 +20,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #1089ff;
 }
 
 @keyframes App-logo-spin {
@@ -34,7 +34,7 @@
 
 html {
   background: #23374D;
-  color: white;
+  color: #e5e5e5;
 }
 
 .App {
@@ -73,10 +73,6 @@ p {
 
 .owed {
   display: flex;
-  margin: 0 auto;
-  width: 20rem;
-}
-
-.owed button {
-  margin: 1rem auto 1rem auto;
+  justify-content: space-evenly;
+  align-items: center;
 }
