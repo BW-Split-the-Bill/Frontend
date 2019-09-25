@@ -5,7 +5,9 @@ import axios from 'axios';
 import './App.css';
 import SignUp from './SignUp';
 import Login from './Login';
+import TipCalculator from './tip-calculator/';
 import Invite from './Invite';
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
       <h1>Or</h1>
       <SignUp />
     
+     <TipCalculator />
       <Invite />
     </div>
   );

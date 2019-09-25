@@ -1,0 +1,18 @@
+.button-group {
+    box-shadow: -1px 1px 5px 0px rgba(0, 0, 0, .35);
+    border-radius: 5px;
+    background: #e5e5e5;
+    display: flex;
+}
+
+.tip-button {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px 0;
+    border: none;
+    background: none;
+    flex-grow: 1;
+}
+.tip-button:hover {
+    background-color: #fff;
+}

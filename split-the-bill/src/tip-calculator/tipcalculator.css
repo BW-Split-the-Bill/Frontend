@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+.tip-calculator {
+    padding: 50px;
+    background: linear-gradient(to bottom, #1089ff 0%,#1089ff 100%);
+    box-shadow: 36px -28px 133px 0 rgba(0, 0, 0, .35);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
