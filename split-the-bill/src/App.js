@@ -7,6 +7,7 @@ import SignUp from './SignUp';
 import Login from './Login';
 import TipCalculator from './tip-calculator/';
 import Invite from './Invite';
+import Paid from './PaidOrNot';
 
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
     
      <TipCalculator />
       <Invite />
+
+      <Paid />
     </div>
   );
 }

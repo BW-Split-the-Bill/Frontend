@@ -24,8 +24,11 @@ const SignUp = ({ errors, touched, status }) => {
             <Form>
                 <h1>Sign Up</h1>
 
-                {touched.name && errors.name && <p>{errors.name}</p>}
-                <Field type='text' name='name' placeholder=' Name'/>
+                {touched.firstName && errors.firstName && <p>{errors.firstName}</p>}
+                <Field type='text' name='firstName' placeholder=' First Name'/>
+
+                {touched.lastName && errors.lastName && <p>{errors.lastName}</p>}
+                <Field type='text' name='lastName' placeholder=' Last Name'/>
 
                 {touched.username && errors.username && <p>{errors.username}</p>}
                 <Field type='text' name='username' placeholder=' Username'/>
@@ -33,11 +36,11 @@ const SignUp = ({ errors, touched, status }) => {
                 {touched.email && errors.email && <p>{errors.email}</p>}
                 <Field type='text' name='email' placeholder=' Email'/>
                 
-                {touched.phone && errors.phone && <p>{errors.phone}</p>}
-                <Field type='integer' name='phone' placeholder=' Phone'/>
+                {touched.phoneNumber && errors.phoneNumber && <p>{errors.phoneNumber}</p>}
+                <Field type='integer' name='phoneNumber' placeholder=' Phone Number'/>
 
-                {touched.pass && errors.pass && <p>{errors.pass}</p>}
-                <Field type='password' name='pass' placeholder=' Password'/>
+                {touched.password && errors.password && <p>{errors.password}</p>}
+                <Field type='password' name='password' placeholder=' Password'/>
                 <br/>
                 <button type='submit'>Create Account</button>
             </Form>
@@ -47,20 +50,22 @@ const SignUp = ({ errors, touched, status }) => {
 export default withFormik({
     mapPropsToValues: (values) => {
         return {
-            name: values.name || '',
+            firstName: values.firstName || '',
+            lastName: values.lastName || '',
             username: values.username || '',
             email: values.email || '',
-            phone: values.phone || '',
-            pass: values.pass || ''
+            phoneNumber: values.phoneNumber || '',
+            password: values.password || ''
         }
     },
 
     validationSchema: yup.object().shape({
-        name: yup.string().required('Name is required!'),
+        firstName: yup.string().required('First Name is required!'),
+        lastName: yup.string().required('Last Name is required!'),
         username: yup.string().required('Username is required!'),
         email: yup.string().required('Email is required!'),
-        phone: yup.string().required('Phone number is required!'),
-        pass: yup.string().required('Password is required!')
+        phoneNumber: yup.string().required('Phone number is required!'),
+        password: yup.string().required('Password is required!')
     }),
 
     handleSubmit: (values, { setStatus }) => {
