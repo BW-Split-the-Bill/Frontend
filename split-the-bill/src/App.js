@@ -14,10 +14,10 @@ function App() {
       <Login />
       <h1>Or</h1>
       <SignUp />
-    
+
       <TipCalculator />
       <Invite />
-
+  
       <Paid />
     </div>
   );

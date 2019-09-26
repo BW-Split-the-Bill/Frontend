@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 
 
 const Paid = () => {
-    const [owed, setOwed] = useState();
+    const [paid, setPaid] = useState();
 
     const Done = () => {
-        setOwed('Paid');
+        setPaid(true);
     }
 
-    if (owed === 'Paid') {
+    if (paid === true) {
         return (
             <div className='owed'>
                 <h3>Bill is paid up</h3>
