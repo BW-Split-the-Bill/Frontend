@@ -2,23 +2,28 @@ import React, { useState } from 'react';
 
 
 const Paid = () => {
-    const [owed, setOwed] = useState();
+    const [paid, setPaid] = useState();
 
     const Done = () => {
-        setOwed('Paid');
+        setPaid(true);
     }
 
-    if (owed === 'Paid') {
+    const notDone = () => {
+        setPaid(false);
+    }
+
+    if (paid === true) {
         return (
             <div className='owed'>
-                <h3>Bill is paid up</h3>
+                <h3>Dallas43 is paid up</h3>
                 <button className='owed' onClick={Done}>Paid Off</button>
+                <button className='owed' onClick={notDone}>Owes again</button>
             </div>
         )
     } else {
         return(
             <div className='owed'>
-                <h3>Bill owes you</h3>
+                <h3>Dallas43 owes you</h3>
                 <button className='owed' onClick={Done}>Paid Off</button>
             </div>
 

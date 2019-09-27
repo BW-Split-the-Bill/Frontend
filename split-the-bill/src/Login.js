@@ -2,17 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field, yupToFormErrors } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
-import styled from 'styled-components';
+import TabNav from './TabNav';
 
 const Login = ({ errors, touched, status }) => {
     const [login, setLogin] = useState([])
-
-    const SForm = styled.div`
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
-        width: 20rem;
-    `
 
     useEffect(() => {
         if (status) {
@@ -30,7 +23,7 @@ const Login = ({ errors, touched, status }) => {
                 {touched.password && errors.password && <p>{errors.password}</p>}
                 <Field type='password' name='password' placeholder=' Password'/>
                 <br/>
-                <button type='submit'>Login</button>
+                <button type='submit' onClick={TabNav}>Login</button>
             </Form>
     )
 }

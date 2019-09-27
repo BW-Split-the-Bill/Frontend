@@ -65,6 +65,7 @@ button {
   width: 10rem;
   font-size: 1rem;
   font-family: 'Bitter', serif;
+  text-decoration: none;
 }
 
 p {
@@ -75,4 +76,14 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  text-decoration: none;
+  color: #e5e5e5;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 2rem;
+  font-family: 'Bitter', serif;
+  text-decoration: none;
 }
