@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
 
 const Paid = () => {
@@ -16,7 +15,7 @@ const Paid = () => {
     if (paid === true) {
         return (
             <div className='owed'>
-                <h3>Bill is paid up</h3>
+                <h3>Dallas43 is paid up</h3>
                 <button className='owed' onClick={Done}>Paid Off</button>
                 <button className='owed' onClick={notDone}>Owes again</button>
             </div>
@@ -24,7 +23,7 @@ const Paid = () => {
     } else {
         return(
             <div className='owed'>
-                <h3>Bill owes you</h3>
+                <h3>Dallas43 owes you</h3>
                 <button className='owed' onClick={Done}>Paid Off</button>
             </div>
 
