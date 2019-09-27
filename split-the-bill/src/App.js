@@ -2,10 +2,7 @@ import React from 'react';
 import './App.css';
 import SignUp from './SignUp';
 import Login from './Login';
-import TipCalculator from './tip-calculator/';
-import Invite from './Invite';
-import Paid from './PaidOrNot';
-
+import TabNav from './TabNav';
 
 function App() {
   return (
@@ -15,10 +12,7 @@ function App() {
       <h1>Or</h1>
       <SignUp />
 
-      <TipCalculator />
-      <Invite />
-  
-      <Paid />
+      <TabNav />
     </div>
   );
 }
