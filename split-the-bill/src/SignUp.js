@@ -2,23 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field, yupToFormErrors } from 'formik';
 import * as yup from 'yup';
 import axios from 'axios';
-import styled from 'styled-components';
 
 const SignUp = ({ errors, touched, status }) => {
     const [login, setLogin] = useState([])
-
-    const SForm = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 20rem;
-    `
 
     useEffect(() => {
         if (status) {
             setLogin([ ...login, status])
         }
-    }, status)
+    }, [status])
 
     return (
             <Form>
