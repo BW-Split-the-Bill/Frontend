@@ -11,7 +11,7 @@ const Login = ({ errors, touched, status }) => {
         if (status) {
             setLogin([ ...login, status])
         }
-    }, status)
+    }, [status])
 
     return (
             <Form>        

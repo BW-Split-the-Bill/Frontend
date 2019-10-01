@@ -87,3 +87,20 @@ p {
   font-family: 'Bitter', serif;
   text-decoration: none;
 }
+
+h1 {
+  text-decoration: none;
+  color: #e5e5e5;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+.space {
+  height: 5rem;
+}

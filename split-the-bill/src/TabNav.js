@@ -1,16 +1,16 @@
-import React from "react";
-import { Tab, Menu, Icon } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
-import './App.css'
-import TipCalculator from './tip-calculator/index';
-import Invite from './Invite';
-import Paid from './PaidOrNot';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function TabNav() {
-    const panes =[
-        {menuItem: 'Calculator', render:() => <Tab.Pane as={NavLink} to='/calculator'><TipCalculator/></Tab.Pane>},
-        {menuItem: 'Invite Friends', render:() => <Tab.Pane as={NavLink} to='/invite'><Invite /></Tab.Pane>},
-        {menuItem: 'Paid or Not', render:() => <Tab.Pane as={NavLink} to='/paid'><Paid/></Tab.Pane>},
-    ]
-        return  <Tab panes={panes}/>
+const TabNav = () => {
+    return (
+        <div className='tab'>
+            <h1><Link className='tab' to='/'>Home</Link></h1>
+            <h1><Link className='tab' to='/login'>Login</Link></h1>
+            <h1><Link className='tab' to='/calculator'>Calculator</Link></h1>
+            <h1><Link className='tab' to='/invite'>Invite Friends</Link></h1>
+            <h1><Link className='tab' to='/paid'>Paid or Not</Link></h1>
+        </div>
+    );
 };
+
+export default TabNav;
